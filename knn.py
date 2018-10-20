@@ -4,7 +4,7 @@ import compute as cp
 
 
 window = tkinter.Tk()
-window.title("KNN")
+window.title("KNN algorithm on Iris dataset")
 
 lab1 = tkinter.Label(window,text="Sepal Length: ")
 var1 = tkinter.DoubleVar()
