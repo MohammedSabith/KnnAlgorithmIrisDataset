@@ -1,10 +1,13 @@
 import math
 import tkinter
 import compute as cp
+import tkinter.messagebox
 
 
 window = tkinter.Tk()
 window.title("KNN algorithm on Iris dataset")
+window.config(bg="#5A4FCF")
+
 
 lab1 = tkinter.Label(window,text="Sepal Length: ")
 var1 = tkinter.DoubleVar()
@@ -28,9 +31,12 @@ def setData():
 	arg3 = var3.get()
 	arg4 = var4.get()
 	cp.compute(arg1,arg2,arg3,arg4)
+	tkinter.messagebox.showinfo("Result","The given example belongs to "+cp.maxsp.upper())
 
 
-butt1 = tkinter.Button(window,text="submit",command=setData)
+
+butt1 = tkinter.Button(window,text="SUBMIT",command=setData)
+
 
 
 lab1.grid(row=1,column=1)
@@ -44,6 +50,15 @@ lab4.grid(row=4,column=1)
 ent4.grid(row=4,column=3)
 
 butt1.grid(row=5,column=2)
+
+window.grid_columnconfigure(1,weight=2)
+window.grid_columnconfigure(3,weight=2)
+window.grid_rowconfigure(1,weight=2)
+window.grid_rowconfigure(2,weight=2)
+window.grid_rowconfigure(3,weight=2)
+window.grid_rowconfigure(4,weight=2)
+window.grid_rowconfigure(5,weight=2)
+
 window.mainloop()
 
 
