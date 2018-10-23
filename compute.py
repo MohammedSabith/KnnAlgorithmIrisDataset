@@ -4,10 +4,11 @@ import iris as ir
 k = 3
 
 testD = {}
-
+maxsp = ''
 def compute(v1,v2,v3,v4):
 	dist = []
 	global testD
+	global maxsp
 	testD = {
 		0:{
 		'sepalLength':v1,
